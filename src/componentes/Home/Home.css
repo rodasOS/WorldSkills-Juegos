@@ -1,0 +1,11 @@
+h2{
+  text-align: center;
+}
+
+.contenedor-juegos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}

@@ -1,0 +1,16 @@
+.Header{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3em;
+  border-bottom: #000 2px groove;
+  margin-bottom: 1em;
+
+  &>strong{
+    border: 2px #000 solid;
+    height: fit-content;
+    padding: 0.5em;
+    font-size: 2em;
+  }
+}

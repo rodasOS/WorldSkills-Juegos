@@ -1,0 +1,8 @@
+.InfoJuego{
+  width: 800px;
+  border: 2px #000  dashed;
+  padding: 3em 1em;
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+}

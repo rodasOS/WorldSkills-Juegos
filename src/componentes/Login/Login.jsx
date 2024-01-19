@@ -4,7 +4,7 @@ import './Login.css';
 import appFirebase from '../../credenciales';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
-const auth = getAuth(appFirebase);
+export const auth = getAuth(appFirebase);
 
 export default function Login() {
 	const [registrando, setRegistrando] = useState(false);
