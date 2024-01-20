@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import { HashRouter, Route, BrowserRouter, Routes, Navigate, redirect } from 'react-router-dom';
+import { HashRouter, Route, Routes, Navigate } from 'react-router-dom';
+import Error from './componentes/404/404.jsx';
 // import { AuthContextProvider, UserAuth } from './context/AuthContext';
 
 //Importando los modulos de firebase
@@ -25,16 +26,17 @@ function App() {
 	});
 
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			{/* <div className='App'>{usuario ? <Home correoUsuario={usuario.email} /> : <Login />}</div> */}
-			{usuario ? <Navigate to='/' replace={true}/> : ''}
+			{usuario ? <Navigate to='/' replace={true} /> : ''}
 			<div className='App'>
 				<Routes>
-					<Route path='/' element= {<Home correoUsuario={usuario ? usuario.email : ''} usuario ={usuario}/>}/>
-					<Route path='/login' element={<Login />}/>
+					<Route path='/' element={<Home correoUsuario={usuario ? usuario.email : ''} usuario={usuario} />} />
+					<Route path='/login' element={<Login />} />
+					<Route path='*' element={<Error />} />
 				</Routes>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
